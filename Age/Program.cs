@@ -24,21 +24,25 @@ namespace Age
             int age = (year - birth);
             Console.SetCursorPosition(12, 15);
             Console.WriteLine($"You are {age} years old!");
-            Console.ReadLine();
-            
-            if (age <= 0)
+
+            Console.SetCursorPosition(12, 16);
+            if (age <= 0 && age > 120)
             {
                 Console.WriteLine("neexistuje");
             }
-            else if (age <= 15)
+            else if (age <= 18 && age > 0)
             {
                 Console.WriteLine("You are a child!");
             }
-            else if (age < )
+            else if (age <= 65 && age > 18)
+            {
+                Console.WriteLine("You are an adult!");
+            }
+            else if (age > 65 && age < 120)
+            {
+                Console.WriteLine("You are a pensioner!");
+            }
             
-
-
-
 
         }
         static void frame(int left, int top)
@@ -57,6 +61,8 @@ namespace Age
             Console.SetCursorPosition(left, top + 5);
             Console.Write("║                                        ║");
             Console.SetCursorPosition(left, top + 6);
+            Console.Write("║                                        ║");
+            Console.SetCursorPosition(left, top + 7);
             Console.Write("╚════════════════════════════════════════╝");
         }
     }
